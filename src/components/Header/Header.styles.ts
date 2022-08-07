@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Wrapper = styled.div`
   background: crimson;
@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
     background: crimson;
     opacity: 0.9;
   }
-  max-height: 100px ;
+  max-height: 100px;
 `;
 
 export const Content = styled.div`

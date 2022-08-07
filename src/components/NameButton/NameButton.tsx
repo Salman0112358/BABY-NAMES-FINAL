@@ -1,17 +1,31 @@
-import React from 'react'
+import React from "react";
 
-import { NameElementProp } from '../../Types/types'
+import { NameElementProp } from "../../Types/types";
 
-import { Wrapper, NameElementMale, NameElementFemale } from '../NameButton/NameButton.styles'
+import {
+  Wrapper,
+  NameElementMale,
+  NameElementFemale,
+} from "../NameButton/NameButton.styles";
 
-const NameButton = ({name, sex} : NameElementProp) : JSX.Element => {
+const NameButton = ({ id, name, sex }: NameElementProp): JSX.Element => {
   return (
     <Wrapper>
-      {sex==="m" 
-      ? <NameElementMale><a href="#"><span>{name}</span></a></NameElementMale> 
-      :<NameElementFemale><a href="#"><span>{name}</span></a></NameElementFemale> }
+      {sex === "m" ? (
+        <NameElementMale>
+          <a href="#">
+            <span>{name}</span>
+          </a>
+        </NameElementMale>
+      ) : (
+        <NameElementFemale>
+          <a href="#">
+            <span>{name}</span>
+          </a>
+        </NameElementFemale>
+      )}
     </Wrapper>
-  )
-}
+  );
+};
 
-export default NameButton
+export default NameButton;
