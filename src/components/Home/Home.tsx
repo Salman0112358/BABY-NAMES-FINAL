@@ -24,10 +24,9 @@ const fullNameArray = NameData; //original unsorted name data
 
 const Home = (): JSX.Element => {
   const [searchTerm, SetSearchTerm] = useState("");
-  const [favouriteBabyNames, SetFavouriteBabyNames] = useState<
-    NameElementProp[]
-  >([]);
+  const [favouriteBabyNames, SetFavouriteBabyNames] = useState<NameElementProp[]>([]);
   const [genderFilter, SetGenderFilter] = useState<string>("");
+
 
   const sortedNameArray = sortNameArray(fullNameArray); // sorting array alphabetically
   const searchFilterArray: NameElementProp[] = filterSearchArray(
@@ -51,7 +50,7 @@ const Home = (): JSX.Element => {
       <FilterButtons SetGenderFilter={SetGenderFilter}></FilterButtons>
 
       <Grid
-        header={`You have ${favouriteBabyNames.length} Saved Favourite Names`}
+        header={`Showing ${favouriteBabyNames.length} Favourite Names`}
       >
         {favouriteBabyNames.map((item) => (
           <div
@@ -68,7 +67,7 @@ const Home = (): JSX.Element => {
           </div>
         ))}
       </Grid>
-      <Grid header={`There are ${mainBabyNames.length} Names In The Main List`}>
+      <Grid header={`Showing ${mainBabyNames.length} Names In The Main List`}>
         {mainBabyNames.map((item) => (
           <div
             key={item.id}
