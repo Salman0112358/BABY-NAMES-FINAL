@@ -1,7 +1,20 @@
-import { greet } from "./utils/greet";
+import React from 'react'
+/*Importing React Components*/
+import Home from './components/Home/Home';
+/*Importing global styling*/
+import { GlobalStyle } from "./GlobalStyles";
+
+
+
 
 function App(): JSX.Element {
-  return <h1>{greet("World")}</h1>;
+  return (
+    <>
+    <Home/>
+    <GlobalStyle/>
+    </>
+  )
 }
+ 
 
 export default App;

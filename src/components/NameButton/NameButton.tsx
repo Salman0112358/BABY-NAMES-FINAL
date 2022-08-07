@@ -1,0 +1,17 @@
+import React from 'react'
+
+import { NameElementProp } from '../../Types/types'
+
+import { Wrapper, NameElementMale, NameElementFemale } from '../NameButton/NameButton.styles'
+
+const NameButton = ({name, sex} : NameElementProp) : JSX.Element => {
+  return (
+    <Wrapper>
+      {sex==="m" 
+      ? <NameElementMale><a href="#"><span>{name}</span></a></NameElementMale> 
+      :<NameElementFemale><a href="#"><span>{name}</span></a></NameElementFemale> }
+    </Wrapper>
+  )
+}
+
+export default NameButton
